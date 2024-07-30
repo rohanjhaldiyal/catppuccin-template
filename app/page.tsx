@@ -5,6 +5,7 @@ import Link from "next/link";
 export default function Home() {
   return (
     <div className="flex flex-col items-center gap-8 py-8 px-4">
+      <DeployButton />
       <Header />
       <WorkExperience />
       <Education />
@@ -19,6 +20,18 @@ export default function Home() {
       <OtherTechExperience />
       <References />
     </div>
+  );
+}
+
+// comment out the below code if you don't want the deploy button
+function DeployButton() {
+  return (
+    <>
+      <span className="text-ctp-text">Deploy Catppuccin Template to Vercel</span>
+      <a href="https://vercel.com/new/clone?repository-url=https://github.com/rohanjhaldiyal/catppuccin-template">
+        <img src="https://vercel.com/button" alt="Deploy with Vercel" />
+      </a>
+    </>
   );
 }
 
